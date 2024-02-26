@@ -6,6 +6,8 @@ import numpy as np
 dir_string = '/Users/Documents/PDFs/'
 report = 'report.pdf'
 
+tabula.convert_into(os.path.join(cat_loc, report), os.path.join(cat_loc, 'report.csv'), output_format="csv", pages='all')
+
 initial_df= pd.read_csv(os.path.join(dir_string, 'report.csv'), dtype={
     'Sua cota': np.str,
     'Unidades': np.str,
